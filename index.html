@@ -67,6 +67,13 @@ footer{text-align:center;color:var(--sub);font-size:12px;margin-top:22px;word-br
 article.post-page p a,article.post-page li a,.cap a{display:inline-flex;align-items:center;min-height:44px;padding:0 2px}
 article.post-page li{margin-bottom:0}
 details.faq summary{display:flex;align-items:center;min-height:44px}
+.badge{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;margin-left:6px;border:1px solid var(--line);background:var(--note);color:var(--text)}
+.badge.end{background:#6b5e3f;color:#fff;border-color:#6b5e3f}
+.finder{display:flex;gap:8px;margin:0 0 6px}.finder input{flex:1;min-width:0;min-height:48px;font-size:18px;padding:0 12px;border:2px solid var(--honey);border-radius:12px;background:var(--card);color:var(--text)}.finder button{min-height:48px;padding:0 16px;font-size:16px;font-weight:800;border:0;border-radius:12px;background:var(--honey);color:var(--on-honey)}
+.finder-msg{min-height:20px;margin:0 0 12px;font-size:14px;color:var(--sub);text-align:center}
+.endnote{background:var(--note);border-radius:12px;padding:12px;text-align:center;font-size:14px;margin:0 0 14px}
+.oldlist{margin:0 0 22px;padding:0;list-style:none}.oldlist li{border-bottom:1px solid var(--line)}.oldlist a{display:flex;align-items:center;min-height:44px;gap:8px;word-break:keep-all;overflow-wrap:anywhere}
+.alllist{padding:0;list-style:none}.alllist li{padding:10px 0;border-bottom:1px solid var(--line);word-break:keep-all;overflow-wrap:anywhere}
 /* 3단계: 글 중간 텍스트 버튼, 홈 카드 보조 링크 */
 .cta-mid{margin:4px 0 14px}.btn-mid{display:flex;align-items:center;justify-content:center;min-height:44px;text-align:center;font-weight:700;font-size:15px;padding:8px 12px;border:2px solid var(--honey);border-radius:12px;color:var(--text)!important;text-decoration:none;word-break:keep-all}
 .card .btn{font-size:18px;min-height:56px}
@@ -83,6 +90,11 @@ details.faq summary{display:flex;align-items:center;min-height:44px}
     <p class="notice">이 게시물은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
   </header>
   <p class="find">릴스에서 보신 번호를 누르세요</p>
+  <form class="finder" id="finder" role="search" aria-label="번호로 찾기">
+    <input id="finder-no" type="number" inputmode="numeric" min="1" step="1" placeholder="번호 입력 (예: 7)" aria-label="찾을 번호">
+    <button type="submit">찾기</button>
+  </form>
+  <p class="finder-msg" id="finder-msg" aria-live="polite"></p>
   <ul class="chips" aria-label="번호 바로가기">
     <li><a href="#n9">9번</a></li>
     <li><a href="#n8">8번</a></li>
@@ -184,6 +196,7 @@ details.faq summary{display:flex;align-items:center;min-height:44px}
       <a class="read" href="p/humidifier-saynic-4l/">자세한 글 읽기</a>
       <a class="post" href="https://www.instagram.com/p/Dfe1BM-IIyG/" target="_blank" rel="noopener">게시물 보기</a>
     </article>
+  <p class="cap" style="text-align:center"><a href="all/">전체 번호 목록 보기</a></p>
   <section class="idx" aria-label="추천 글 목록">
     <h2>추천 글 찾아보기</h2>
     <h3>카테고리별 글 모음</h3>
@@ -215,6 +228,14 @@ details.faq summary{display:flex;align-items:center;min-height:44px}
   </section>
   <footer>상품 정보·가격은 쿠팡 상품 페이지 기준이며 변동될 수 있어요.</footer>
 </main>
+<script>
+(function(){var M={"1":"#n1","2":"#n2","3":"#n3","4":"#n4","5":"#n5","6":"#n6","7":"#n7","8":"#n8","9":"#n9"},MAX=9;
+var f=document.getElementById('finder'),i=document.getElementById('finder-no'),m=document.getElementById('finder-msg');
+f.addEventListener('submit',function(e){e.preventDefault();var n=String(parseInt(i.value,10));
+if(M[n]){m.textContent='';var t=M[n];if(t.charAt(0)==='#'){location.hash=t;var el=document.getElementById(t.slice(1));if(el)el.scrollIntoView();}else{location.href=t;}}
+else{m.textContent=(isNaN(parseInt(i.value,10))?'숫자를 입력해 주세요.':n+'번은 아직 없어요. 1번부터 '+MAX+'번까지 있어요.');}});
+})();
+</script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0750003e334e4ff0834ac74c1a434910"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
