@@ -30,8 +30,9 @@ article.post-page img.hero{width:100%;height:auto;border-radius:14px;margin:10px
 .tbl{overflow-x:auto;margin:10px 0}table{border-collapse:collapse;width:100%;font-size:14px}th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top;word-break:keep-all}thead th{background:var(--note)}
 details.faq{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0}details.faq summary{font-weight:700;cursor:pointer;font-size:16px}details.faq p{margin:8px 0 0;font-size:15px}
 
-:root{--bg:#FFF8E7;--card:#FFFFFF;--text:#2B2312;--sub:#6B5E3F;--honey:#F5B400;--on-honey:#2B2312;--line:#F0E2B8;--note:#FFEFC2}
-@media (prefers-color-scheme:dark){:root{--bg:#17130A;--card:#241E10;--text:#FFF3D1;--sub:#C9B98A;--line:#3A311A;--note:#2E2511}}
+:root{--bg:#FFF8E7;--card:#FFFFFF;--text:#2B2312;--sub:#6B5E3F;--honey:#F5B400;--on-honey:#2B2312;--line:#F0E2B8;--note:#FFEFC2;--link:#8A5300;--visited:#6E4A7A}
+@media (prefers-color-scheme:dark){:root{--bg:#17130A;--card:#241E10;--text:#FFF3D1;--sub:#C9B98A;--line:#3A311A;--note:#2E2511;--link:#FFC933;--visited:#D9B0E0}}
+:where(a:link){color:var(--link)}:where(a:visited){color:var(--visited)}
 *{box-sizing:border-box}
 html,body{margin:0;overflow-x:hidden}
 body{background:var(--bg);color:var(--text);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.5;-webkit-text-size-adjust:100%}
