@@ -42,7 +42,12 @@ h1{margin:10px 0 0;font-size:24px}
 .handle{color:var(--sub);font-size:14px;margin:2px 0 0}
 .notice{margin:16px 0 0;padding:12px 14px;background:var(--note);border:2px solid var(--honey);border-radius:12px;font-weight:700;font-size:14px;word-break:keep-all}
 .idx{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin-bottom:18px}.idx h2{margin:0 0 4px;font-size:18px}.idx h3{font-size:15px;margin:14px 0 4px;color:var(--sub)}.idx ul{margin:0;padding-left:18px}.idx li{margin-bottom:6px;font-size:15px;word-break:keep-all;overflow-wrap:anywhere}
-.find{margin:14px 0 0;font-size:16px;font-weight:700}
+.find{margin:0 0 10px;font-size:19px;font-weight:800;text-align:center;word-break:keep-all}
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 22px;padding:0;list-style:none}
+.chips a{display:flex;align-items:center;justify-content:center;min-height:52px;background:var(--honey);color:var(--on-honey);font-weight:800;font-size:20px;text-decoration:none;border-radius:12px}
+.chips a:active{filter:brightness(.92)}
+.card{scroll-margin-top:12px}
+.idx{margin-top:26px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 16px;margin-bottom:14px;box-shadow:0 2px 8px rgba(245,180,0,.15)}
 .meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--sub)}
 .no{background:var(--honey);color:var(--on-honey);font-weight:800;padding:2px 10px;border-radius:999px}
@@ -63,30 +68,17 @@ footer{text-align:center;color:var(--sub);font-size:12px;margin-top:22px;word-br
     <p class="handle">@ggultem.notes</p>
     <p class="notice">이 게시물은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
   </header>
-  <section class="idx" aria-label="추천 글 목록">
-    <h2>추천 글 찾아보기</h2>
-    <h3>난방·방한</h3>
-    <ul>
-      <li><a href="p/humidifier-saynic-4l/">가습기 고르는 법 — 초음파 가습기 추천 체크포인트와 세이닉 4L 정보</a></li>
-      <li><a href="p/winter-curtain-casamaru/">방한커튼 설치 방법·고르는 법 — 벨크로 패딩 방한 커튼 (까사마루 따숨)</a></li>
-      <li><a href="p/washable-electric-pad-duplex-ivory/">워셔블 전기요 추천 탄소매트 가격 비교 — 사이즈별 가격·세탁법·KC 표기 (듀플렉스)</a></li>
-    </ul>
-    <h3>옷·신발</h3>
-    <ul>
-      <li><a href="p/henley-waffle-tee/">와플 헨리넥 긴팔 추천 — 고르는 법과 비슷한 스타일 일루소 헨리넥</a></li>
-      <li><a href="p/light-padding-hood-yencz/">경량패딩 추천 — 후드 숏패딩 고르는 법과 비슷한 스타일 옌츠 소개</a></li>
-      <li><a href="p/fur-lined-slip-on-similar-style/">털신발 여성 추천 — 털 안감 슬립온 고르는 법, 비슷한 스타일 레이지고 MZH51</a></li>
-    </ul>
-    <h3>먹거리</h3>
-    <ul>
-      <li><a href="p/hoppang-samlip-red-bean/">삼립 단팥호빵 10봉 — 보관·소비기한·찜기 조리 확인법과 호빵 매출 44% 증가(삼립 발표)</a></li>
-    </ul>
-    <h3>데스크·재미템</h3>
-    <ul>
-      <li><a href="p/mouse-mover-vaydeer-m4/">마우스 무버 추천 — 마우스 지글러 받침형 vs USB형 비교 (베이디어 M4)</a></li>
-    </ul>
-  </section>
-  <p class="find">게시물 번호로 찾으세요</p>
+  <p class="find">릴스에서 보신 번호를 누르세요</p>
+  <ul class="chips" aria-label="번호 바로가기">
+    <li><a href="#n8">8번</a></li>
+    <li><a href="#n7">7번</a></li>
+    <li><a href="#n6">6번</a></li>
+    <li><a href="#n5">5번</a></li>
+    <li><a href="#n4">4번</a></li>
+    <li><a href="#n3">3번</a></li>
+    <li><a href="#n2">2번</a></li>
+    <li><a href="#n1">1번</a></li>
+  </ul>
 
     <article class="card" id="n8">
       <div class="meta"><span class="no">8번</span><time>2026-11-10</time></div>
@@ -167,6 +159,29 @@ footer{text-align:center;color:var(--sub);font-size:12px;margin-top:22px;word-br
       <a class="read" href="p/humidifier-saynic-4l/">자세한 글 읽기</a>
       <a class="post" href="https://www.instagram.com/p/Dfe1BM-IIyG/" target="_blank" rel="noopener">게시물 보기</a>
     </article>
+  <section class="idx" aria-label="추천 글 목록">
+    <h2>추천 글 찾아보기</h2>
+    <h3>난방·방한</h3>
+    <ul>
+      <li><a href="p/humidifier-saynic-4l/">가습기 고르는 법 — 초음파 가습기 추천 체크포인트와 세이닉 4L 정보</a></li>
+      <li><a href="p/winter-curtain-casamaru/">방한커튼 설치 방법·고르는 법 — 벨크로 패딩 방한 커튼 (까사마루 따숨)</a></li>
+      <li><a href="p/washable-electric-pad-duplex-ivory/">워셔블 전기요 추천 탄소매트 가격 비교 — 사이즈별 가격·세탁법·KC 표기 (듀플렉스)</a></li>
+    </ul>
+    <h3>옷·신발</h3>
+    <ul>
+      <li><a href="p/henley-waffle-tee/">와플 헨리넥 긴팔 추천 — 고르는 법과 비슷한 스타일 일루소 헨리넥</a></li>
+      <li><a href="p/light-padding-hood-yencz/">경량패딩 추천 — 후드 숏패딩 고르는 법과 비슷한 스타일 옌츠 소개</a></li>
+      <li><a href="p/fur-lined-slip-on-similar-style/">털신발 여성 추천 — 털 안감 슬립온 고르는 법, 비슷한 스타일 레이지고 MZH51</a></li>
+    </ul>
+    <h3>먹거리</h3>
+    <ul>
+      <li><a href="p/hoppang-samlip-red-bean/">삼립 단팥호빵 10봉 — 보관·소비기한·찜기 조리 확인법과 호빵 매출 44% 증가(삼립 발표)</a></li>
+    </ul>
+    <h3>데스크·재미템</h3>
+    <ul>
+      <li><a href="p/mouse-mover-vaydeer-m4/">마우스 무버 추천 — 마우스 지글러 받침형 vs USB형 비교 (베이디어 M4)</a></li>
+    </ul>
+  </section>
   <footer>상품 정보·가격은 쿠팡 상품 페이지 기준이며 변동될 수 있어요.</footer>
 </main>
 </body>
